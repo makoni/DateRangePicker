@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                  = 'DateRangePicker'
-    s.version               = '2.1'
+    s.version               = '4.2'
 
     s.homepage              = 'https://github.com/MrMage/DateRangePicker'
     s.summary               = 'The best (?) date range picker control for OS X.'
@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
     s.platforms             = { :osx => '10.9' }
 
     s.source_files          = 'DateRangePicker/*.{h,swift}'
+    s.resources             = 'DateRangePicker/*.lproj/*'
     s.module_name           = 'DateRangePicker'
-    s.source                = { :git => 'https://github.com/MrMage/DateRangePicker.git', :tag => "v2.1" }
+    s.source                = { :git => 'https://github.com/MrMage/DateRangePicker.git', :tag => 'v4.2' }
     s.requires_arc          = true
     s.frameworks            = 'AppKit', 'Foundation'
-		
-		s.xcconfig = { 'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'YES' }
+    s.swift_versions        = ['4.2', '5']
 end

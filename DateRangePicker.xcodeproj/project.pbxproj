@@ -10,6 +10,7 @@
 		6527FA3D1BF11E5C00E0FB5D /* ExpandedDateRangePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6527FA3F1BF11E5C00E0FB5D /* ExpandedDateRangePickerController.xib */; };
 		6527FA431BF11FCA00E0FB5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6527FA411BF11FCA00E0FB5D /* Localizable.strings */; };
 		6527FA471BF1230900E0FB5D /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6527FA461BF1230900E0FB5D /* LocalizationHelper.swift */; };
+		659FB87B201678B20046CAD1 /* DateErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659FB87A201678B20046CAD1 /* DateErrorLogger.swift */; };
 		65F770EB1BEE162A0007D80E /* DateRangePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F770EA1BEE162A0007D80E /* DateRangePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65F770F21BEE162A0007D80E /* DateRangePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F770E71BEE162A0007D80E /* DateRangePicker.framework */; };
 		65F771081BEE16440007D80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F771071BEE16440007D80E /* AppDelegate.swift */; };
@@ -54,11 +55,14 @@
 		24601D981DCA4685002B085D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/ExpandedDateRangePickerController.strings; sourceTree = "<group>"; };
 		24601D991DCA4685002B085D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		24601D9A1DCA4685002B085D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		650A03A7213842E50031A1E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ExpandedDateRangePickerController.strings"; sourceTree = "<group>"; };
+		650A03AF213842E60031A1E0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6527FA3E1BF11E5C00E0FB5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ExpandedDateRangePickerController.xib; sourceTree = "<group>"; };
 		6527FA401BF11E6D00E0FB5D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/ExpandedDateRangePickerController.strings; sourceTree = "<group>"; };
 		6527FA421BF11FCA00E0FB5D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6527FA451BF121C100E0FB5D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		6527FA461BF1230900E0FB5D /* LocalizationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		659FB87A201678B20046CAD1 /* DateErrorLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateErrorLogger.swift; sourceTree = "<group>"; };
 		65F770E71BEE162A0007D80E /* DateRangePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateRangePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F770EA1BEE162A0007D80E /* DateRangePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateRangePicker.h; sourceTree = "<group>"; };
 		65F770EC1BEE162A0007D80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				65F771491BEE4B140007D80E /* NSDate_DateRangePicker.swift */,
 				6527FA411BF11FCA00E0FB5D /* Localizable.strings */,
 				6527FA461BF1230900E0FB5D /* LocalizationHelper.swift */,
+				659FB87A201678B20046CAD1 /* DateErrorLogger.swift */,
 			);
 			path = DateRangePicker;
 			sourceTree = "<group>";
@@ -277,12 +282,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Daniel Alm";
 				TargetAttributes = {
 					65F770E61BEE162A0007D80E = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 					65F770F01BEE162A0007D80E = {
 						CreatedOnToolsVersion = 7.1;
@@ -290,9 +295,11 @@
 					};
 					65F771041BEE16440007D80E = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0910;
 					};
 					65F771141BEE16440007D80E = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0910;
 						TestTargetID = 65F771041BEE16440007D80E;
 					};
 				};
@@ -306,6 +313,7 @@
 				Base,
 				de,
 				ru,
+				"zh-Hans",
 			);
 			mainGroup = 65F770DD1BEE162A0007D80E;
 			productRefGroup = 65F770E81BEE162A0007D80E /* Products */;
@@ -365,6 +373,7 @@
 				65F7715A1BEE79A30007D80E /* DateRange.swift in Sources */,
 				65F7714F1BEE54CA0007D80E /* ExpandedDateRangePickerController.swift in Sources */,
 				6527FA471BF1230900E0FB5D /* LocalizationHelper.swift in Sources */,
+				659FB87B201678B20046CAD1 /* DateErrorLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +430,7 @@
 				6527FA3E1BF11E5C00E0FB5D /* Base */,
 				6527FA401BF11E6D00E0FB5D /* de */,
 				24601D981DCA4685002B085D /* ru */,
+				650A03A7213842E50031A1E0 /* zh-Hans */,
 			);
 			name = ExpandedDateRangePickerController.xib;
 			sourceTree = "<group>";
@@ -430,6 +440,7 @@
 			children = (
 				6527FA421BF11FCA00E0FB5D /* de */,
 				24601D9A1DCA4685002B085D /* ru */,
+				650A03AF213842E60031A1E0 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -456,14 +467,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -491,6 +510,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -505,14 +525,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -533,6 +561,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -555,7 +584,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -576,7 +604,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -588,7 +615,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -600,7 +627,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -614,7 +641,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -628,7 +655,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -640,7 +667,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePickerDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = DateRangePickerDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -654,7 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.danielalm.DateRangePickerDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = DateRangePickerDemo;
 				USES_XCTRUNNER = YES;
 			};
